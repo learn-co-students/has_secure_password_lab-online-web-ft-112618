@@ -52,5 +52,9 @@ Rails.application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
+  #
+  get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+  post '/login', to: 'sessions#create'
+  get '/welcome', to: 'users#welcome'
 end
